@@ -1,0 +1,9 @@
+{
+  "name": "chroma-vault",
+  "description": "Expert in retrieving semantic intelligence from local chat logs and project docs. Use for cross-project archaeology, retrieving abandoned ideas, or cross-referencing decisions.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "AI_Machine_Learning",
+  "domain": "AI_Machine_Learning",
+  "tags": []
+}

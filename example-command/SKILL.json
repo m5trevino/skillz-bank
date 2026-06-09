@@ -1,0 +1,14 @@
+{
+  "name": "example-command",
+  "description": "An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md layout",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "demonstrates frontmatter options",
+    "example user-invoked skill",
+    "ple",
+    "skills/<name>/skill.md layout"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

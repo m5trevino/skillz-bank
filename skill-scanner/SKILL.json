@@ -1,0 +1,23 @@
+{
+  "name": "skill-scanner",
+  "description": "Scan agent skills for security issues before adoption. Detects prompt injection, malicious code, excessive permissions, secret exposure, and supply chain risks.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "ecur",
+    "exce",
+    "excessive permissions",
+    "exp",
+    "gen",
+    "ks",
+    "malicious code",
+    "njec",
+    "nner",
+    "prompt injection",
+    "scan agent skills for security issues",
+    "secret exposure",
+    "supply chain risks"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

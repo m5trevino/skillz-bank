@@ -1,0 +1,9 @@
+{
+  "name": "xmind",
+  "description": "Create XMind mind map files (.xmind). Use this skill when the user asks to create a mind map, mindmap, XMind file, or brainstorming diagram. Produces native .xmind files that open directly in the XMind application.\n",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management",
+  "tags": []
+}

@@ -1,0 +1,12 @@
+/home/flintx/.agents/skills/aichat-cli-parser/scripts/parse_kimi.py
+
+Root: ~/.kimi/sessions/
+Full path: ~/.kimi/sessions/{project_hash}/{session_uuid}/
+project_hash = md5 hash of the original working directory (built from ~/.kimi/kimi.json)
+session_uuid = the actual chat session folder
+
+Inside each session folder you get:
+state.json ← title, wire_mtime, archived flag, custom_title
+wire.jsonl ← the rich log (turns, tool calls, think blocks, actions)
+context.jsonl ← fallback conversation history
+Other folders: uploads/, transcripts/, tasks/

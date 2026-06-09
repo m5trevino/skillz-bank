@@ -1,0 +1,22 @@
+{
+    "name": "twitter-automation",
+    "description": "Automate Twitter/X tasks via Rube MCP (Composio): posts, search, users, bookmarks, lists, media. Always search tools first for current schemas.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "always search tools first for current schemas",
+        "bookmarks",
+        "composio",
+        "cur",
+        "list",
+        "lists",
+        "media",
+        "posts",
+        "rch",
+        "rube mcp",
+        "schemas",
+        "search",
+        "tasks",
+        "users"
+    ]
+}

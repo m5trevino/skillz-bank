@@ -1,0 +1,172 @@
+# Text
+
+Display styled text content with support for colors, attributes, and text selection.
+
+## Basic Usage
+
+### Renderable API
+
+``` astro-code
+import { TextRenderable, createCliRenderer } from "@opentui/core"
+
+const renderer = await createCliRenderer()
+
+const text = new TextRenderable(renderer, {
+  id: "greeting",
+  content: "Hello, OpenTUI!",
+  fg: "#00FF00",
+})
+
+renderer.root.add(text)
+```
+
+### Construct API
+
+``` astro-code
+import { Text, createCliRenderer } from "@opentui/core"
+
+const renderer = await createCliRenderer()
+
+renderer.root.add(
+  Text({
+    content: "Hello, OpenTUI!",
+    fg: "#00FF00",
+  }),
+)
+```
+
+## Text attributes
+
+Combine multiple text attributes using bitwise OR:
+
+``` astro-code
+import { TextRenderable, TextAttributes } from "@opentui/core"
+
+const styledText = new TextRenderable(renderer, {
+  id: "styled",
+  content: "Important Message",
+  fg: "#FFFF00",
+  attributes: TextAttributes.BOLD | TextAttributes.UNDERLINE,
+})
+```
+
+### Available attributes
+
+| Attribute                      | Description        |
+|--------------------------------|--------------------|
+| `TextAttributes.BOLD`          | Bold text          |
+| `TextAttributes.DIM`           | Dimmed text        |
+| `TextAttributes.ITALIC`        | Italic text        |
+| `TextAttributes.UNDERLINE`     | Underlined text    |
+| `TextAttributes.BLINK`         | Blinking text      |
+| `TextAttributes.INVERSE`       | Inverted colors    |
+| `TextAttributes.HIDDEN`        | Hidden text        |
+| `TextAttributes.STRIKETHROUGH` | Strikethrough text |
+
+## Template literals for rich text
+
+Use the `t` template literal for inline styling within a single text element:
+
+``` astro-code
+import { TextRenderable, t, bold, underline, fg, bg, italic } from "@opentui/core"
+
+const richText = new TextRenderable(renderer, {
+  id: "rich",
+  content: t`${bold("Important:")} ${fg("#FF0000")(underline("Warning!"))} Normal text`,
+})
+```
+
+### Available style functions
+
+``` astro-code
+import { t, bold, dim, italic, underline, blink, reverse, strikethrough, fg, bg } from "@opentui/core"
+
+// Basic attributes
+t`${bold("bold text")}`
+t`${italic("italic text")}`
+t`${underline("underlined")}`
+t`${strikethrough("deleted")}`
+
+// Colors
+t`${fg("#FF0000")("red text")}`
+t`${bg("#0000FF")("blue background")}`
+
+// Combining styles
+t`${bold(fg("#FFFF00")("bold yellow"))}`
+```
+
+## Positioning
+
+``` astro-code
+const text = new TextRenderable(renderer, {
+  id: "positioned",
+  content: "Absolute position",
+  position: "absolute",
+  left: 10,
+  top: 5,
+})
+```
+
+## Text selection
+
+Enable text selection for copying:
+
+``` astro-code
+const selectableText = new TextRenderable(renderer, {
+  id: "selectable",
+  content: "Select me!",
+  selectable: true, // Default is true
+})
+
+const nonSelectable = new TextRenderable(renderer, {
+  id: "label",
+  content: "Button Label",
+  selectable: false, // Disable selection
+})
+```
+
+## Properties
+
+| Property                         | Type                            | Default      | Description                  |
+|----------------------------------|---------------------------------|--------------|------------------------------|
+| `content`                        | `string | StyledText`           | `""`         | The text content to display  |
+| `fg`                             | `string | RGBA`                 | \-           | Foreground (text) color      |
+| `bg`                             | `string | RGBA`                 | \-           | Background color             |
+| `attributes`                     | `TextAttributes`                | `0`          | Text styling attributes      |
+| `selectable`                     | `boolean`                       | `true`       | Whether text can be selected |
+| `position`                       | `"relative" | "absolute"`       | `"relative"` | Positioning mode             |
+| `left`, `top`, `right`, `bottom` | `number | "auto" | "{number}%"` | \-           | Position offsets             |
+
+## Example: status bar
+
+``` astro-code
+import { Text, Box, t, bold, fg } from "@opentui/core"
+
+const statusBar = Box(
+  {
+    position: "absolute",
+    bottom: 0,
+    width: "100%",
+    height: 1,
+    backgroundColor: "#333333",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingLeft: 1,
+    paddingRight: 1,
+  },
+  Text({
+    content: t`${bold("myfile.ts")} - ${fg("#888888")("TypeScript")}`,
+  }),
+  Text({
+    content: t`Ln ${fg("#00FF00")("42")}, Col ${fg("#00FF00")("15")}`,
+  }),
+)
+
+renderer.root.add(statusBar)
+```
+
+
+---
+
+_Source: https://opentui.com/docs/components/text
+_Downloaded: 2026-05-21 19:04:49 UTC_

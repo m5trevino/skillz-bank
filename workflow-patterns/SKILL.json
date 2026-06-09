@@ -1,0 +1,24 @@
+{
+  "name": "workflow-patterns",
+  "description": "Use this skill when implementing tasks according to Conductor's TDD workflow, handling phase checkpoints, managing git commits for tasks, or understanding the verification protocol.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "and",
+    "ckp",
+    "commit",
+    "ern",
+    "git commit",
+    "handling phase checkpoints",
+    "implementing tasks according to conductor's tdd workflow",
+    "kfl",
+    "kfl-ern",
+    "managing git commits for tasks",
+    "phase",
+    "task",
+    "tdd workflow",
+    "workflow"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

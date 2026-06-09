@@ -1,0 +1,11 @@
+{
+  "name": "session-resume",
+  "description": "Resume context from previous session",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "resume context from previous session"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

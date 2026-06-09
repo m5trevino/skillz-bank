@@ -1,0 +1,10 @@
+{
+  "name": "skill-generate",
+  "description": "",
+  "source": "/home/flintx/.gemini/skills_master_vault/Specialized_Tools_Utilities/X-generate-skill",
+  "sourceType": "local",
+  "subpath": "skill-generate",
+  "installedAt": "2026-04-17T17:17:57.883Z",
+  "enabled": true,
+  "checksum": "68b01cc62e0585fc"
+}

@@ -1,0 +1,27 @@
+{
+    "name": "webflow-automation",
+    "description": "Automate Webflow CMS collections, site publishing, page management, asset uploads, and ecommerce orders via Rube MCP (Composio). Always search tools first for current schemas.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "always search tools first for current schemas",
+        "asset uploads",
+        "bfl",
+        "cms collections",
+        "composio",
+        "cur",
+        "ecommerce orders",
+        "erce",
+        "management",
+        "orders",
+        "page management",
+        "publ",
+        "publishing",
+        "rch",
+        "rube mcp",
+        "schemas",
+        "search",
+        "site publishing",
+        "uploads"
+    ]
+}

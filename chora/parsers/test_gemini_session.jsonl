@@ -1,0 +1,10 @@
+{"type":"$set","sessionId":"test-session-123"}
+{"type":"user","content":"Hello Gemini, can you write a Python function to reverse a string?"}
+{"type":"gemini","content":"Here's a simple Python function to reverse a string:\n\n```python\ndef reverse_string(s):\n    return s[::-1]\n```\n\nYou can use it like this:\n\n```python\nprint(reverse_string(\"hello\"))  # Output: olleh\n```","thoughts":[{"subject":"Planning","description":"The user wants a simple Python function. I'll provide a concise solution with examples."}]}
+{"type":"user","content":"Now can you read the file /home/user/data.txt and tell me what's inside?"}
+{"type":"gemini","content":"I'll read that file for you.","toolCalls":[{"name":"ReadFile","args":{"path":"/home/user/data.txt"},"description":"Read file contents","displayName":"Read File","status":"ok","result":[{"functionResponse":{"response":{"output":"Line 1: Hello World\nLine 2: This is a test file\nLine 3: Gemini CLI parser test data"}}}]}],"thoughts":[{"subject":"Tool Use","description":"The user wants me to read a file. I should use the ReadFile tool."}]}
+{"type":"user","content":"Create a new file called hello.py with a main function."}
+{"type":"gemini","content":"I'll create that file for you.","toolCalls":[{"name":"WriteFile","args":{"path":"/home/user/hello.py","content":"def main():\n    print(\"Hello from Gemini CLI!\")\n\nif __name__ == \"__main__":\n    main()\n"},"description":"Write file contents","displayName":"Write File","status":"ok","result":[{"functionResponse":{"response":{"output":"File written successfully"}}}]}],"thoughts":[{"subject":"File Creation","description":"The user wants a new Python file. I'll use WriteFile to create it with a main function."}]}
+{"type":"info","message":"Context compacted"}
+{"type":"user","content":"Thanks, that's all!"}
+{"type":"gemini","content":"You're welcome! Let me know if you need anything else."}

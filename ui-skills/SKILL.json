@@ -1,0 +1,8 @@
+{
+  "name": "ui-skills",
+  "description": "Opinionated, evolving constraints to guide agents when building interfaces",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "UI_UX_Design",
+  "domain": "UI_UX_Design"
+}

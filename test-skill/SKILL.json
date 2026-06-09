@@ -1,0 +1,12 @@
+{
+  "name": "test-skill",
+  "description": "Brief description of what this skill does and when to use it.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "brief description of what this skill does and when to use it",
+    "c"
+  ],
+  "category": "Testing_Quality_Assurance",
+  "domain": "Testing_Quality_Assurance"
+}

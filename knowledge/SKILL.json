@@ -1,0 +1,22 @@
+{
+  "name": "knowledge",
+  "description": "Use when the user wants to promote cross-project knowledge to the global Engineering/ folder, or says \"promote knowledge\", \"compound notes\", \"knowledge synthesis\", or \"find repeated ideas across projects\".",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "compound notes",
+    "eng",
+    "find repeated ideas across projects",
+    "global engineering/ folder",
+    "jec",
+    "knowledge",
+    "knowledge synthesis",
+    "neer",
+    "notes",
+    "promote cross-project knowledge",
+    "promote knowledge",
+    "wle"
+  ],
+  "category": "Personalities_Roles",
+  "domain": "Personalities_Roles"
+}

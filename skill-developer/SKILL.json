@@ -1,0 +1,22 @@
+{
+  "name": "skill-developer",
+  "description": "Comprehensive guide for creating and managing skills in Claude Code with auto-activation system, following Anthropic's official best practices including the 500-line rule and progressive disclosure pattern.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "500-line rule",
+    "anthropic's official best practices",
+    "best",
+    "best practices",
+    "claude",
+    "claude code",
+    "claude code with auto-activation system",
+    "ern",
+    "nclu",
+    "progressive disclosure",
+    "progressive disclosure pattern",
+    "rule"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

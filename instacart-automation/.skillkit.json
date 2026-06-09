@@ -1,0 +1,10 @@
+{
+  "name": "instacart-automation",
+  "description": "",
+  "source": "/home/flintx/.gemini/skills_master_vault/Composio_Integrations/C-instacart-automation",
+  "sourceType": "local",
+  "subpath": "instacart-automation",
+  "installedAt": "2026-04-17T17:16:39.231Z",
+  "enabled": true,
+  "checksum": "dcde403855031471"
+}

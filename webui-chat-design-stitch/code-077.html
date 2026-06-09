@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SYNTHETIC_ARCHITECT // Cyber-Amber Terminal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary": "#ecfcff",
+              "surface-container-high": "#2a292f",
+              "outline": "#84967e",
+              "on-primary": "#003907",
+              "error": "#ffb4ab",
+              "on-error-container": "#ffdad6",
+              "secondary-container": "#cf5cff",
+              "inverse-on-surface": "#303036",
+              "surface-bright": "#39383e",
+              "primary-fixed": "#72ff70",
+              "secondary-fixed": "#f8d8ff",
+              "on-tertiary-container": "#006b78",
+              "on-secondary-container": "#480063",
+              "on-tertiary": "#00363d",
+              "surface-container-highest": "#35343a",
+              "error-container": "#93000a",
+              "on-background": "#e4e1e9",
+              "surface-container-lowest": "#0e0e13",
+              "secondary-fixed-dim": "#ecb2ff",
+              "on-tertiary-fixed-variant": "#004f58",
+              "inverse-surface": "#e4e1e9",
+              "background": "#131318",
+              "tertiary-fixed-dim": "#00daf3",
+              "surface-variant": "#35343a",
+              "surface-dim": "#131318",
+              "on-secondary-fixed": "#320047",
+              "on-secondary": "#520071",
+              "surface": "#131318",
+              "on-primary-fixed": "#002203",
+              "on-error": "#690005",
+              "on-secondary-fixed-variant": "#74009f",
+              "on-tertiary-fixed": "#001f24",
+              "on-surface-variant": "#b9ccb2",
+              "tertiary-fixed": "#9cf0ff",
+              "surface-container": "#1f1f25",
+              "secondary": "#ecb2ff",
+              "on-surface": "#e4e1e9",
+              "surface-container-low": "#1b1b20",
+              "primary-fixed-dim": "#00e639",
+              "inverse-primary": "#006e16",
+              "tertiary-container": "#7fecff",
+              "outline-variant": "#3b4b37",
+              "on-primary-fixed-variant": "#00530e",
+              "primary": "#ebffe2",
+              "on-primary-container": "#007117",
+              "primary-container": "#ffb000", /* Modified for Amber Accessibility */
+              "surface-tint": "#ffb000"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Space Grotesk"],
+              "mono": ["JetBrains Mono"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131318;
+            color: #e4e1e9;
+            /* Cyber Amber Overlay Effect */
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 176, 0, 0.02) 0%, transparent 100%);
+        }
+        .amber-glow {
+            color: #ffb000;
+            text-shadow: 0 0 12px rgba(255, 176, 0, 0.4);
+        }
+        .amber-border {
+            border-color: rgba(255, 176, 0, 0.15);
+        }
+        .terminal-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .terminal-scroll::-webkit-scrollbar-track {
+            background: #131318;
+        }
+        .terminal-scroll::-webkit-scrollbar-thumb {
+            background: #35343a;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container/30 selection:text-primary-container overflow-hidden">
+<!-- TopNavBar (Shared Component JSON Mapping) -->
+<header class="flex justify-between items-center px-8 h-16 w-full bg-[#131318] dark:bg-[#131318] border-b border-white/5 z-50">
+<div class="text-xl font-bold tracking-tighter text-[#ffb000] font-headline uppercase">
+            SYNTHETIC_ARCHITECT
+        </div>
+<nav class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] text-sm tracking-tight">
+<a class="text-[#ffb000] border-b-2 border-[#ffb000] pb-1" href="#">Workspace</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Library</a>
+<a class="text-white/60 hover:text-white transition-colors" href="#">Deploy</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white/60 hover:bg-white/5 p-2 rounded-sm transition-all duration-200" data-icon="settings">settings</button>
+<button class="material-symbols-outlined text-white/60 hover:bg-white/5 p-2 rounded-sm transition-all duration-200" data-icon="help">help</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-white/10">
+<img alt="User profile" data-alt="Close up portrait of a person with contemplative expression in high-contrast dramatic studio lighting with warm orange highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGp7o7MClASAgvnVBoqAMl8OH17PfmK8HDItCGhgFfHHwfyLVR3dtBW24PosnWpriV78ywUEjUNCkOzJpbzATF6zj_LqXobHLcQA4JJyhI6g_Blr426e62PVk0K0AZZE-fgIhltxwrxEm7r_Zmjla19KF6e_NHtncV3fd4u9L2R6Ja_6qSMJoEIzL2DWPxhxDlzcLPkfg0_wiCZ3LD3JZbRL_w6ogBY6sCYfv4Ih6QlRx0v9fatuQStLhS5LotmQckRyNCxEqOrWE"/>
+</div>
+</div>
+</header>
+<div class="flex h-[calc(100vh-64px)] overflow-hidden">
+<!-- SideNavBar (Shared Component JSON Mapping) -->
+<aside class="hidden md:flex flex-col h-screen py-6 bg-[#1f1f25] dark:bg-[#1f1f25] h-full w-64 border-r border-white/5">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-sm bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div>
+<p class="font-headline uppercase tracking-widest text-[10px] text-white/40">Terminal V1</p>
+<p class="font-headline uppercase tracking-widest text-[10px] text-[#ffb000]">Active Session</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1 px-2">
+<a class="flex items-center gap-3 text-[#ffb000] bg-[#ffb000]/10 px-4 py-3 rounded-sm border-l-4 border-[#ffb000] font-['Space_Grotesk'] uppercase tracking-widest text-[10px]" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                    New Chat
+                </a>
+<a class="flex items-center gap-3 text-white/40 hover:text-white px-4 py-3 transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-[10px] hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+                    History
+                </a>
+<a class="flex items-center gap-3 text-white/40 hover:text-white px-4 py-3 transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-[10px] hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="model_training">model_training</span>
+                    Models
+                </a>
+<a class="flex items-center gap-3 text-white/40 hover:text-white px-4 py-3 transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-[10px] hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+                    Analytics
+                </a>
+</nav>
+<div class="mt-auto border-t border-white/5 pt-4 px-2 space-y-1">
+<button class="w-full mb-4 bg-primary-container text-on-primary font-headline font-bold py-3 text-xs uppercase tracking-widest rounded-sm hover:brightness-110 transition-all">
+                    Initialize Protocol
+                </button>
+<a class="flex items-center gap-3 text-white/40 hover:text-white px-4 py-3 transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-[10px] hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-3 text-white/40 hover:text-white px-4 py-3 transition-colors font-['Space_Grotesk'] uppercase tracking-widest text-[10px] hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                    Docs
+                </a>
+</div>
+</aside>
+<!-- Main Workspace -->
+<main class="flex-1 relative flex flex-col bg-surface">
+<!-- Chat Header -->
+<div class="px-12 py-6 flex items-center justify-between border-b border-white/5">
+<div>
+<h1 class="text-2xl font-headline font-bold amber-glow">SESSION: AMBER_PRIME</h1>
+<p class="font-mono text-xs text-white/40 uppercase tracking-tighter">Lat: 37.7749 // Lon: -122.4194 // Protocol: SECURE_SOCKET</p>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-headline font-bold uppercase text-[#ffb000] border border-[#ffb000]/20">GPT-4_OPTIMIZED</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-headline font-bold uppercase text-white/40 border border-white/10">TOKENS: 1.2k</span>
+</div>
+</div>
+<!-- Chat Canvas -->
+<div class="flex-1 overflow-y-auto terminal-scroll px-12 py-8 space-y-12">
+<!-- User Message -->
+<div class="flex justify-end ml-24">
+<div class="bg-surface-container-high p-6 rounded-xl border-l border-white/5 shadow-2xl max-w-2xl">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-[14px] text-white/20">person</span>
+<span class="font-mono text-[10px] text-white/40 uppercase tracking-widest">Operator / 14:22:01</span>
+</div>
+<p class="text-lg text-on-surface font-body leading-relaxed">
+                            Analyze the security vulnerability in the current neural architecture and suggest a path to harden the encryption layers without increasing latency.
+                        </p>
+</div>
+</div>
+<!-- AI Reasoning Block (The "Structured Flow") -->
+<div class="mr-24 space-y-6">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-1.5 h-6 bg-primary-container"></div>
+<span class="font-headline font-bold text-lg uppercase tracking-tighter amber-glow">Synthetic Analysis Process</span>
+</div>
+<!-- Step 1: Data Gathering -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-5 border border-white/5 rounded-lg relative overflow-hidden group hover:bg-white/5 transition-all">
+<div class="absolute top-0 right-0 p-2 text-primary-container/20 font-mono text-2xl group-hover:text-primary-container/40">01</div>
+<h4 class="font-headline font-bold text-xs uppercase mb-2 text-primary-container">Scan Topology</h4>
+<p class="text-xs font-mono text-white/50 leading-relaxed">Identifying node clusters and identifying potential leakage points in sub-layer 4.</p>
+</div>
+<div class="bg-surface-container-low p-5 border border-white/5 rounded-lg relative overflow-hidden group hover:bg-white/5 transition-all">
+<div class="absolute top-0 right-0 p-2 text-primary-container/20 font-mono text-2xl group-hover:text-primary-container/40">02</div>
+<h4 class="font-headline font-bold text-xs uppercase mb-2 text-primary-container">Heuristic Check</h4>
+<p class="text-xs font-mono text-white/50 leading-relaxed">Comparing current protocol against 14 baseline hardening standards for ML models.</p>
+</div>
+<div class="bg-surface-container-low p-5 border border-white/5 rounded-lg relative overflow-hidden group hover:bg-white/5 transition-all">
+<div class="absolute top-0 right-0 p-2 text-primary-container/20 font-mono text-2xl group-hover:text-primary-container/40">03</div>
+<h4 class="font-headline font-bold text-xs uppercase mb-2 text-primary-container">Latency Mapping</h4>
+<p class="text-xs font-mono text-white/50 leading-relaxed">Pre-calculating overhead of AES-256-GCM across distributed endpoints.</p>
+</div>
+</div>
+<!-- AI Main Response -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-primary-container/10 relative">
+<div class="absolute -top-3 -left-3">
+<div class="w-10 h-10 bg-primary-container/10 backdrop-blur-xl border border-primary-container/20 flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<span class="font-mono text-[10px] text-primary-container uppercase tracking-widest">Synthetic Intelligence / Result_Alpha</span>
+</div>
+<div class="prose prose-invert max-w-none">
+<p class="text-xl font-body leading-relaxed text-[#ffb000]/90">
+                                The vulnerability resides in the <span class="font-mono bg-white/5 px-2 py-0.5 rounded text-white italic">weight-normalization</span> phase of layer 3. To harden without latency trade-offs, I recommend implementing <strong class="text-primary-container">Differential Privacy Masks</strong> directly in the floating-point precision layer.
+                            </p>
+<div class="mt-6 p-4 bg-surface-container-lowest border border-white/5 rounded-sm font-mono text-sm leading-6 text-white/70">
+<span class="text-primary-container font-bold"># Recommended Protocol Update</span><br/>
+                                SET SEC_LAYER = "DP_MASK_V2"<br/>
+                                DEFINE NOISE_THRESHOLD = 0.0034<br/>
+                                EXECUTE OPTIMIZE_LATENCY_PATH --target-sub-ms
+                            </div>
+</div>
+<!-- Action Chips -->
+<div class="mt-8 flex flex-wrap gap-3">
+<button class="bg-secondary-container/10 hover:bg-secondary-container/20 text-secondary border border-secondary/20 px-4 py-2 rounded-full font-headline font-bold text-[10px] uppercase tracking-widest transition-all">Implement Masking</button>
+<button class="bg-white/5 hover:bg-white/10 text-white/60 px-4 py-2 rounded-full font-headline font-bold text-[10px] uppercase tracking-widest transition-all">Export Logs</button>
+<button class="bg-white/5 hover:bg-white/10 text-white/60 px-4 py-2 rounded-full font-headline font-bold text-[10px] uppercase tracking-widest transition-all">Recalculate Latency</button>
+</div>
+</div>
+</div>
+<!-- Empty state visual for future turns -->
+<div class="flex justify-center py-12 opacity-10">
+<span class="font-mono text-[8px] uppercase tracking-[1rem] amber-glow">System Ready for Input</span>
+</div>
+</div>
+<!-- Intelligence Input Field -->
+<div class="px-12 pb-8">
+<div class="relative max-w-5xl mx-auto">
+<div class="absolute -top-12 left-0 right-0 flex justify-center">
+<div class="h-[1px] w-full max-w-sm bg-gradient-to-r from-transparent via-primary-container/30 to-transparent"></div>
+</div>
+<div class="bg-surface-container/60 backdrop-blur-xl border border-white/5 rounded-xl p-2 flex items-end gap-4 shadow-[0_0_40px_rgba(255,176,0,0.05)] focus-within:border-primary-container/30 transition-all">
+<button class="p-3 text-white/30 hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<textarea class="flex-1 bg-transparent border-none focus:ring-0 text-lg font-body placeholder:text-white/20 py-3 resize-none min-h-[56px] max-h-48" placeholder="Describe your architecture..."></textarea>
+<div class="flex gap-2 p-1">
+<button class="p-3 text-white/30 hover:text-white transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="bg-primary-container text-on-primary w-12 h-12 flex items-center justify-center rounded-lg hover:scale-105 active:scale-95 transition-all shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</div>
+<div class="flex justify-center gap-6 mt-3 font-mono text-[8px] text-white/20 uppercase tracking-widest">
+<span>Status: Operational</span>
+<span>Mode: Adaptive Reasoning</span>
+<span>Encryption: End-to-End</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#131318] border-t border-white/5 flex justify-around items-center px-4 z-50">
+<a class="flex flex-col items-center gap-1 text-[#ffb000]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="text-[8px] font-headline uppercase font-bold">Workspace</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white/40" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="text-[8px] font-headline uppercase font-bold">History</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white/40" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[8px] font-headline uppercase font-bold">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-white/40" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[8px] font-headline uppercase font-bold">Profile</span>
+</a>
+</nav>
+<!-- FAB (Suppressed based on context rules, but can be added if primary action matches) -->
+<!-- Not rendered here as this is a dashboard/details focus session -->
+</body></html>

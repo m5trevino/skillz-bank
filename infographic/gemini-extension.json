@@ -1,0 +1,6 @@
+{
+    "name": "infographic",
+    "description": "Generate a summary and infographic for a YouTube video.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md"
+}

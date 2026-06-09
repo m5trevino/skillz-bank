@@ -1,0 +1,18 @@
+{
+    "name": "humanizer",
+    "description": "Rewrites AI-generated text to sound natural and human by removing \"AI-isms\" (verbose, sycophantic, or formulaic patterns). Based on Wikipedia's AI cleanup guidelines. Adapted from the humanizer project by blader.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "base",
+        "cle",
+        "ern",
+        "gener",
+        "humanizer",
+        "humanizer project by blader",
+        "jec",
+        "rewrites ai-generated text to sound natural and human",
+        "wikipedia's ai cleanup guidelines",
+        "zer"
+    ]
+}

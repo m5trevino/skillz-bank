@@ -1,0 +1,10 @@
+{
+  "name": "ocrspace-automation",
+  "description": "",
+  "source": "/home/flintx/.gemini/skills_master_vault/Composio_Integrations/C-ocrspace-automation",
+  "sourceType": "local",
+  "subpath": "ocrspace-automation",
+  "installedAt": "2026-04-17T17:16:56.714Z",
+  "enabled": true,
+  "checksum": "c6cd62777872b9e5"
+}

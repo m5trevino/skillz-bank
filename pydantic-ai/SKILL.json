@@ -1,0 +1,19 @@
+{
+    "name": "pydantic-ai",
+    "description": "Build production-ready AI agents with PydanticAI — type-safe tool use, structured outputs, dependency injection, and multi-model support.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "agents",
+        "ai agent",
+        "dependency injection",
+        "enc",
+        "epen",
+        "multi-model support",
+        "njec",
+        "ruc",
+        "structured output",
+        "structured outputs",
+        "type-safe tool use"
+    ]
+}

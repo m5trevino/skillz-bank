@@ -1,0 +1,20 @@
+{
+  "name": "spec-to-code-compliance",
+  "description": "Verifies code implements exactly what documentation specifies for blockchain audits. Use when comparing code against whitepapers, finding gaps between specs and implementation, or performing compliance checks for protocol implementations.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "and",
+    "blockchain audits",
+    "ckch",
+    "comparing code against whitepapers",
+    "finding gaps between specs and implementation",
+    "gaps",
+    "implementation",
+    "pec",
+    "performing compliance checks for protocol implementations",
+    "verifies code implements exactly what documentation specifies"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

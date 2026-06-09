@@ -1,0 +1,18 @@
+{
+  "name": "skill-router",
+  "description": "Use when the user is unsure which skill to use or where to start. Interviews the user with targeted questions and recommends the best skill(s) from the installed library for their goal.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "best",
+    "erv",
+    "go",
+    "installed library for their goal",
+    "que",
+    "rge",
+    "user is unsure which skill to use or where to start",
+    "views"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

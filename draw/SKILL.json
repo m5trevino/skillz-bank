@@ -1,0 +1,12 @@
+{
+    "name": "draw",
+    "description": "Vector graphics and diagram creation, format conversion (ODG/SVG/PDF) with LibreOffice Draw.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "diagram creation",
+        "draw",
+        "libreoffice draw",
+        "vector graphics"
+    ]
+}

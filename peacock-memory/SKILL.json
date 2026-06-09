@@ -1,0 +1,9 @@
+{
+  "name": "peacock-memory",
+  "description": "Master semantic memory system for FlintX's 1,385 chat archive across  claude/, chatgpt/, and aistudio/ directories. Integrates with Peacock  Engine V2 (localhost:3099) for key rotation, domain triage, and RAG  synthesis. Supports hybrid RRF search, embryonic idea mining, and  30+ project intelligence. Activate when user asks about chat history,  past projects, idea recovery, or memory search.\n",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "AI_Machine_Learning",
+  "domain": "AI_Machine_Learning",
+  "tags": []
+}

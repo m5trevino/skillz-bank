@@ -1,0 +1,18 @@
+{
+  "name": "skill-share",
+  "description": "A skill that creates new Claude skills and automatically shares them on Slack using Rube for seamless team collaboration and skill discovery.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "and",
+    "automatically shares them on slack",
+    "creates new claude skills",
+    "new",
+    "rube",
+    "seamless team collaboration",
+    "skill discovery",
+    "team collaboration"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

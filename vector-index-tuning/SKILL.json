@@ -1,0 +1,15 @@
+{
+  "name": "vector-index-tuning",
+  "description": "Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters, selecting quantization strategies, or scaling vector search infrastructure.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "elec",
+    "enc",
+    "nfr",
+    "rch",
+    "ruc"
+  ],
+  "category": "AI_Machine_Learning",
+  "domain": "AI_Machine_Learning"
+}

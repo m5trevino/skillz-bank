@@ -1,0 +1,12 @@
+/home/flintx/.kimi/skills/chora/scripts/chora.py
+
+Kimi-Code Structure
+
+Root: ~/.kimi-code/sessions/
+Two patterns the script handles:
+Flat: ~/.kimi-code/sessions/ses_{uuid}/
+Grouped by project: ~/.kimi-code/sessions/wd_{project_hash}/ses_{uuid}/
+
+Inside each session folder:
+state.json ← title (from "title" or "custom"), updatedAt/createdAt timestamps, archived flag
+The actual chat data lives inside (usually agents/main/wire.jsonl or similar)

@@ -1,0 +1,9 @@
+{
+  "name": "Streaming Mindmap Rendering",
+  "description": "Implement real-time streaming mindmap rendering using Mind Elixir in web applications. Supports streaming text parsing and incremental updates.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

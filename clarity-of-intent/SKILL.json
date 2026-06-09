@@ -1,0 +1,9 @@
+{
+  "name": "clarity-of-intent",
+  "description": "Use when the user provides unstructured input (chat logs, meeting transcripts, email threads, voice notes, or vague requirements) and needs a structured, precision-crafted context engineering prompt. Activate when user says things like make sense of this, turn this into a prompt, clarify what I want, create instructions from this conversation, or when preparing input for downstream agents in a pipeline. This skill extracts the irreducible core of intent and encodes it in a format that any LLM can execute without ambiguity. use when the user asks to \"prompt creation\", \"clarity-of-intent\", \"prompt engineering\", \"context engineering\", \"specification precision\" \"blueprint of necessity\"",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Personalities_Roles",
+  "domain": "Personalities_Roles",
+  "tags": []
+}

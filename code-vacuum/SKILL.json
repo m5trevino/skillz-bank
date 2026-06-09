@@ -1,0 +1,9 @@
+{
+  "name": "code-vacuum",
+  "description": "Professional codebase merger with aggressive junk filtering. Use when the user asks to \"vacuum the code\", \"merge the codebase\", or \"generate a code payload\" for high-context AI analysis.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

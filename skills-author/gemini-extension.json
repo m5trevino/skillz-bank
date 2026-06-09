@@ -1,0 +1,6 @@
+{
+    "name": "skill-author",
+    "description": "Expertise in authoring Agent Skills according to the open standard. Use when the user asks to \"create a skill\".",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md"
+}

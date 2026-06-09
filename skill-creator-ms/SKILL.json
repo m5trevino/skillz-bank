@@ -1,0 +1,20 @@
+{
+  "name": "skill-creator-ms",
+  "description": "Guide for creating effective skills for AI coding agents working with Azure SDKs and Microsoft Foundry services. Use when creating new skills or updating existing skills.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "azure sdks",
+    "creating new skills",
+    "effec",
+    "erv",
+    "gen",
+    "guide for creating effective skills for ai coding agents",
+    "ks",
+    "microsoft foundry services",
+    "new",
+    "updating existing skills"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

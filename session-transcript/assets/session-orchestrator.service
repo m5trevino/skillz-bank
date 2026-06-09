@@ -1,0 +1,14 @@
+[Unit]
+Description=Session Orchestrator Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 %h/.kimi/skills/session-transcript/scripts/session-daemon.py --daemon
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

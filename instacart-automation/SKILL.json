@@ -1,0 +1,17 @@
+{
+    "name": "instacart-automation",
+    "description": "Automate Instacart tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "always search tools first for current schemas",
+        "automate instacart tasks",
+        "composio",
+        "cur",
+        "rch",
+        "rube mcp",
+        "schemas",
+        "search",
+        "tasks"
+    ]
+}

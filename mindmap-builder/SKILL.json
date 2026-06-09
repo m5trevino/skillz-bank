@@ -1,0 +1,9 @@
+{
+  "name": "mindmap-builder",
+  "description": "Create and edit hierarchical mindmap to organize ideas and visualize concepts using specific JSON structures. Automatically handles common syntax pitfalls (list syntax conflicts) to ensure diagrams render correctly in TriliumNext Note / Trilium Note.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

@@ -1,0 +1,15 @@
+{
+    "name": "tdd-workflow",
+    "description": "Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "c",
+        "cle",
+        "development",
+        "kfl",
+        "ple",
+        "red-green-refactor cycle",
+        "test-driven development workflow principles"
+    ]
+}

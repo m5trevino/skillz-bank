@@ -1,0 +1,6 @@
+{
+    "name": "prd",
+    "description": "Convert a request into PRD-quality scope, measurable acceptance criteria, and delivery constraints.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md"
+}

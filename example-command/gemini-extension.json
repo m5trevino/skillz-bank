@@ -1,0 +1,6 @@
+{
+    "name": "example-command",
+    "description": "An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md layout",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md"
+}

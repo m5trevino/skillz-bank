@@ -1,0 +1,17 @@
+{
+  "name": "prd-drafter",
+  "description": "Pickle Rick's PRD Engine. Use when you need to define the requirements, scope, and goals for a new feature or project before coding to avoid \"Jerry-work.\"",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "ckle",
+    "eng",
+    "jec",
+    "jerr",
+    "nee",
+    "new",
+    "pickle rick's prd engine"
+  ],
+  "category": "Documentation_Writing",
+  "domain": "Documentation_Writing"
+}

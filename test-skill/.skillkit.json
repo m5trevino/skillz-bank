@@ -1,0 +1,10 @@
+{
+  "name": "test-skill",
+  "description": "",
+  "source": "/home/flintx/.gemini/skills_master_vault/Testing_Quality_Assurance/D-test-skill",
+  "sourceType": "local",
+  "subpath": "test-skill",
+  "installedAt": "2026-04-17T17:18:09.321Z",
+  "enabled": true,
+  "checksum": "b816e653c3207cba"
+}

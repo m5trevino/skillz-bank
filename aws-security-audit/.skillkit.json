@@ -1,0 +1,10 @@
+{
+  "name": "aws-security-audit",
+  "description": "",
+  "source": "/home/flintx/.gemini/skills_master_vault/Cloud_DevOps/X-aws-security-audit",
+  "sourceType": "local",
+  "subpath": "aws-security-audit",
+  "installedAt": "2026-04-17T17:20:43.774Z",
+  "enabled": true,
+  "checksum": "8b85c644b9a5bd0f"
+}

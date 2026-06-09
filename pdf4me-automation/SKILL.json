@@ -1,0 +1,17 @@
+{
+    "name": "pdf4me-automation",
+    "description": "Automate Pdf4me tasks via Rube MCP (Composio). Always search tools first for current schemas.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "always search tools first for current schemas",
+        "automate pdf4me tasks",
+        "composio",
+        "cur",
+        "rch",
+        "rube mcp",
+        "schemas",
+        "search",
+        "tasks"
+    ]
+}

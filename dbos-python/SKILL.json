@@ -1,0 +1,20 @@
+{
+    "name": "dbos-python",
+    "description": "Guide for building reliable, fault-tolerant Python applications with DBOS durable workflows. Use when adding DBOS to existing Python code, creating workflows and steps, or using queues for concurrency control.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "ad",
+        "adding dbos to existing python code",
+        "ble",
+        "creating workflows and steps",
+        "cur",
+        "dbos durable workflows",
+        "kfl",
+        "ler",
+        "n",
+        "ppl",
+        "queue",
+        "using queues for concurrency control"
+    ]
+}

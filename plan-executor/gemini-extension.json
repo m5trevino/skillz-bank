@@ -1,0 +1,6 @@
+{
+    "name": "plan-executor",
+    "description": "Expertise in executing finalized architectural plans. Use when the user asks to \"implement the plan\", \"build the feature\", or \"execute the strategy\".",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md"
+}

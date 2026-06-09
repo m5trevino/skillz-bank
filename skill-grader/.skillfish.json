@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "skill-grader",
+  "owner": "majesticlabs-dev",
+  "repo": "majestic-marketplace",
+  "path": "plugins/majestic-tools/skills/skill-grader",
+  "branch": "master",
+  "sha": "b9985587e0a8b0aff1913643ee16650a95d5f3ca",
+  "source": "manual"
+}

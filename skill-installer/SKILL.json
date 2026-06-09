@@ -1,0 +1,16 @@
+{
+  "name": "skill-installer",
+  "description": "Instala, valida, registra e verifica novas skills no ecossistema. 10 checks de seguranca, copia, registro no orchestrator e verificacao pos-instalacao.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "10 checks de seguranca",
+    "copia",
+    "egur",
+    "ks",
+    "registro no orchestrator",
+    "verificacao pos-instalacao"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

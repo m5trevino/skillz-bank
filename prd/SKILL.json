@@ -1,0 +1,9 @@
+{
+  "name": "prd",
+  "description": "Generate high-quality Product Requirements Documents (PRDs) for software systems and AI-powered features. Includes executive summaries, user stories, technical specifications, and risk analysis.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Documentation_Writing",
+  "domain": "Documentation_Writing",
+  "tags": []
+}

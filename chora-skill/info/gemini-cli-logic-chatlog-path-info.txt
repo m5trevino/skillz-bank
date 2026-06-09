@@ -1,0 +1,22 @@
+/home/flintx/.agents/skills/aichat-cli-parser/scripts/parse_gemini.py
+
+Gemini-CLI Chat Log Structure (straight from the code you dropped)
+Root folder:
+~/.gemini/tmp/
+Inside that root you get one folder per project the user was in when they ran Gemini CLI.
+Example:
+~/.gemini/tmp/peacock/
+~/.gemini/tmp/my-other-project/
+For each project folder the structure is:
+
+Main chat logs → chats/ subfolder
+session-*.jsonl ← New preferred format (line-by-line JSONL)
+session-*.json   ← Old single-file JSON format
+Any other *.jsonl files (that don’t start with “session-”) ← Sub-agent logs
+
+Legacy fallback → at the project root level
+logs.json ← simple flat array of entries (used if nothing else is there)
+
+
+The discover_gemini_sources() function walks every project folder, finds all these files, and tags them with a type so the parser knows how to handle them.
+That’s why your gemini reference file was short — the code is doing all the heavy lifting in discover_gemini_sources() and the three parse functions (parse_gemini_jsonl, parse_gemini_json, parse_gemini_logs_json).

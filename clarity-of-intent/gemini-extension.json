@@ -1,0 +1,6 @@
+{
+    "name": "clarity-of-intent",
+    "description": "context engineering blueprint for prompt engineering / specification precision and clarity of intent for objectives",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md"
+}

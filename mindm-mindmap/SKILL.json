@@ -1,0 +1,9 @@
+{
+  "name": "mindm-mindmap",
+  "description": "High-level MindManager mindmap operations via the mindm-mindmap CLI or python -m mindmap.actions. Use when a map must be read (mindmap, selection, grounding info), serialized to Mermaid, or created from Mermaid.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

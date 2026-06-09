@@ -1,0 +1,4 @@
+{"role": "user", "content": "Hello, can you write a hello world in Python?"}
+{"role": "assistant", "content": [{"type": "think", "think": "The user wants a simple hello world script. I'll use WriteFile to create it."}, {"type": "text", "text": "Sure! I'll create a hello_world.py file for you."}]}
+{"role": "user", "content": "Thanks!"}
+{"role": "assistant", "content": [{"type": "text", "text": "You're welcome! Let me know if you need anything else."}]}

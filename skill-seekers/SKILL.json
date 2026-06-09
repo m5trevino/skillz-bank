@@ -1,0 +1,16 @@
+{
+  "name": "skill-seekers",
+  "description": "-Automatically convert documentation websites, GitHub repositories, and PDFs into Claude AI skills in minutes.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "claude",
+    "claude ai skills in minutes",
+    "documentation",
+    "eeker",
+    "github",
+    "hub"
+  ],
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

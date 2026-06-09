@@ -1,0 +1,11 @@
+{
+    "name": "aws-security-audit",
+    "description": "Comprehensive AWS security posture assessment using AWS CLI and security best practices",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "best practices",
+        "ecur",
+        "security"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "project-feature-explainer",
+    "description": "Expert guidance for explaining project features. Use this skill when you need to provide a comprehensive explanation of how a specific feature works, including summaries, deep dives, usage examples, and sequence/workflow diagrams. This skill has references directory which contains additional instructions `checklist.md`, `example-output.md` and `explanation-template.md` that MUST be used for every analysis.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "ckl",
+        "deep dives",
+        "eep",
+        "equence",
+        "examples",
+        "expert guidance for explaining project features",
+        "expl",
+        "jec",
+        "jec-expl-ner",
+        "kfl",
+        "nce",
+        "nclu",
+        "nee",
+        "ner",
+        "pec",
+        "ple",
+        "references directory",
+        "ruc",
+        "sequence/workflow diagrams",
+        "summaries",
+        "template",
+        "usage examples"
+    ]
+}

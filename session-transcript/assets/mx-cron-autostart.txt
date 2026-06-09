@@ -1,0 +1,8 @@
+# Option 1: Cron @reboot (Simplest, works on any Linux)
+# Run: crontab -e
+# Then add this line:
+
+@reboot /bin/bash /home/flintx/.kimi/skills/session-transcript/assets/mx-linux-autostart.sh start
+
+# To also run it every hour to make sure it's still up:
+0 * * * * /bin/bash /home/flintx/.kimi/skills/session-transcript/assets/mx-linux-autostart.sh start

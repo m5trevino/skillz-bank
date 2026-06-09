@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Studio Transcript — {{title}}</title>
+<style>
+:root {
+  --bg: #0a0a0a;
+  --bg-user: rgba(26, 26, 26, 0.6);
+  --bg-bot: rgba(18, 18, 18, 0.6);
+  --border: #333;
+  --text: #e0e0e0;
+  --text-dim: #777;
+  --accent: #f9d94a; /* Peacock Gold */
+  --accent-dim: rgba(249, 217, 74, 0.1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+#header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(10,10,10,0.9); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.header-title { font-weight: 800; font-size: 16px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+
+/* Controls */
+.controls { display: flex; gap: 10px; }
+.btn {
+  background: #222; border: 1px solid var(--border); color: var(--text);
+  padding: 5px 15px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600;
+}
+.btn:hover { background: #333; border-color: var(--accent); }
+.btn.active { background: var(--accent); color: #000; border-color: var(--accent); }
+
+/* Containers */
+.view-container { max-width: 1200px; margin: 20px auto; padding: 0 20px; display: none; }
+.view-container.active { display: block; }
+
+/* --- SPLIT VIEW --- */
+.split-turn { display: grid; grid-template-columns: 1fr 60px 1fr; border-bottom: 1px solid var(--border); }
+.split-side { padding: 30px; word-break: break-word; white-space: pre-wrap; position: relative; }
+.split-user { background: var(--bg-user); }
+.split-bot { background: var(--bg-bot); }
+.split-divider { 
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #111; border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+  font-size: 12px; font-weight: bold; color: var(--accent);
+}
+
+/* --- BUBBLE VIEW --- */
+#bubble-view { max-width: 900px; }
+.bubble-row { width: 100%; display: flex; margin-bottom: 30px; position: relative; }
+.bubble-row.user { justify-content: flex-start; }
+.bubble-row.bot { justify-content: flex-end; }
+.bubble {
+  max-width: 80%; padding: 20px 30px; border-radius: 12px; position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5); word-break: break-word; white-space: pre-wrap;
+}
+.bubble.user { background: var(--bg-user); border-left: 3px solid var(--accent); }
+.bubble.bot { background: var(--bg-bot); border-right: 3px solid var(--accent); }
+
+/* Curly Braces */
+.brace { position: absolute; top: 50%; transform: translateY(-50%); width: 25px; height: 60px; opacity: 0.3; transition: opacity 0.3s; }
+.bubble-row:hover .brace { opacity: 1; }
+.brace-left { left: -35px; }
+.brace-right { right: -35px; }
+
+/* Markdown & Code */
+pre { background: #000; padding: 15px; border-radius: 8px; margin: 10px 0; overflow-x: auto; border: 1px solid #222; font-size: 13px; }
+code { font-family: 'Fira Code', monospace; }
+
+/* Checkboxes */
+.cb-wrap { position: absolute; top: 10px; right: 10px; z-index: 10; }
+.msg-cb { cursor: pointer; accent-color: var(--accent); }
+
+/* Floating Actions */
+#fab { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 10px; }
+.fab-btn { width: 50px; height: 50px; border-radius: 50%; background: var(--accent); color: #000; border: none; cursor: pointer; font-size: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="header-title">AI Studio Transcript // {{session_id}}</div>
+  <div class="controls">
+    <button class="btn active" onclick="setView('split', this)">Split View</button>
+    <button class="btn" onclick="setView('bubble', this)">Bubble View</button>
+  </div>
+</header>
+
+<!-- Split View Container -->
+<main id="split-view" class="view-container active"></main>
+
+<!-- Bubble View Container -->
+<main id="bubble-view" class="view-container"></main>
+
+<div id="fab">
+  <button class="fab-btn" onclick="copySelected()" title="Copy Selected">&#128203;</button>
+</div>
+
+<script id="chat-data" type="application/json">
+{{turns_json}}
+</script>
+
+<script>
+const turns = JSON.parse(document.getElementById('chat-data').textContent);
+
+const BRACE_LEFT = `<svg class="brace brace-left" viewBox="0 0 20 50"><path d="M15 5C10 5 5 10 5 15V20C5 23 2 25 0 25C2 25 5 27 5 30V35C5 40 10 45 15 45" fill="none" stroke="#f9d94a" stroke-width="2"/></svg>`;
+const BRACE_RIGHT = `<svg class="brace brace-right" viewBox="0 0 20 50"><path d="M5 5C10 5 15 10 15 15V20C15 23 18 25 20 25C18 25 15 27 15 30V35C15 40 10 45 5 45" fill="none" stroke="#f9d94a" stroke-width="2"/></svg>`;
+
+function setView(mode, btn) {
+  document.querySelectorAll('.view-container').forEach(c => c.classList.remove('active'));
+  document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(`${mode}-view`).classList.add('active');
+  btn.classList.add('active');
+}
+
+function render() {
+  const splitCont = document.getElementById('split-view');
+  const bubbleCont = document.getElementById('bubble-view');
+
+  turns.forEach(turn => {
+    // 1. Render Split View
+    const splitRow = document.createElement('div');
+    splitRow.className = 'split-turn';
+    splitRow.innerHTML = `
+      <div class="split-side split-user">
+        <div class="cb-wrap"><input type="checkbox" class="msg-cb" data-text="[USER] ${turn.user.replace(/"/g, '&quot;')}"></div>
+        ${turn.user}
+      </div>
+      <div class="split-divider">#${turn.turn}</div>
+      <div class="split-side split-bot">
+        <div class="cb-wrap"><input type="checkbox" class="msg-cb" data-text="[BOT] ${turn.bot.replace(/"/g, '&quot;')}"></div>
+        ${turn.bot}
+      </div>
+    `;
+    splitCont.appendChild(splitRow);
+
+    // 2. Render Bubble View
+    const uRow = document.createElement('div');
+    uRow.className = 'bubble-row user';
+    uRow.innerHTML = `${BRACE_LEFT}<div class="bubble user">${turn.user}</div>`;
+    bubbleCont.appendChild(uRow);
+
+    if (turn.bot) {
+      const bRow = document.createElement('div');
+      bRow.className = 'bubble-row bot';
+      bRow.innerHTML = `<div class="bubble bot">${turn.bot}</div>${BRACE_RIGHT}`;
+      bubbleCont.appendChild(bRow);
+    }
+  });
+}
+
+function copySelected() {
+  const selected = Array.from(document.querySelectorAll('.msg-cb:checked'))
+    .map(cb => cb.dataset.text).join('\n\n---\n\n');
+  if (!selected) return alert('No messages selected');
+  navigator.clipboard.writeText(selected).then(() => alert('Copied to clipboard!'));
+}
+
+render();
+</script>
+
+</body>
+</html>

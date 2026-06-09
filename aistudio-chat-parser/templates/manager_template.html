@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Studio Session Manager</title>
+<style>
+:root {
+  --bg: #0d0d0d;
+  --panel: #151515;
+  --border: #333;
+  --text: #e0e0e0;
+  --text-dim: #888;
+  --accent: #f9d94a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; padding: 40px; }
+h1 { font-weight: 800; color: var(--accent); margin-bottom: 30px; letter-spacing: 1px; }
+
+.session-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.session-info { flex: 1; }
+.session-id { font-family: monospace; color: var(--text-dim); font-size: 12px; margin-bottom: 5px; }
+.session-title { font-weight: 600; font-size: 16px; margin-bottom: 10px; }
+
+.rename-box { display: flex; gap: 10px; }
+.rename-input { background: #000; border: 1px solid var(--border); color: var(--text); padding: 5px 10px; border-radius: 4px; font-size: 13px; }
+.rename-btn { background: var(--accent); color: #000; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+.status-tag { font-size: 10px; text-transform: uppercase; padding: 2px 8px; border-radius: 10px; background: rgba(0,255,0,0.1); color: #0f0; border: 1px solid #0f0; }
+
+.actions { display: flex; gap: 15px; }
+.action-link { color: var(--accent); text-decoration: none; font-size: 13px; }
+.action-link:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<h1>AI Studio // Session Archive</h1>
+
+<div id="session-list">
+  <!-- Sessions will be injected here via a registry scanner script -->
+  <div class="session-card">
+    <div class="session-info">
+      <div class="session-id">ID: 72c21245-291d-4ac2-83f4-9ab31eb28df1</div>
+      <div class="session-title">ADB Diagnostics // Port 5037 Fix</div>
+      <div class="actions">
+        <a href="#" class="action-link">View HTML</a>
+        <a href="#" class="action-link">Open Markdown</a>
+        <span class="status-tag">Reviewed</span>
+      </div>
+    </div>
+    <div class="rename-box">
+      <input type="text" class="rename-input" placeholder="New Slug...">
+      <button class="rename-btn">Rename Dir</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

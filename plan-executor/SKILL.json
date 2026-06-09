@@ -1,0 +1,17 @@
+{
+  "name": "plan-executor",
+  "description": "Expertise in executing finalized architectural plans. Use when the user asks to \"implement the plan\", \"build the feature\", or \"execute the strategy\".",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "build",
+    "build the feature",
+    "execu",
+    "execute the strategy",
+    "expertise in executing finalized architectural plans",
+    "implement the plan",
+    "rch"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

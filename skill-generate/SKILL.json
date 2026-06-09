@@ -1,0 +1,8 @@
+{
+  "name": "skill-generate",
+  "description": "Generate a complete SKILL.md file for a library from source documentation and skill tree artifacts. Activate when bootstrapping skills for a new library, regenerating a stale skill after source changes, or producing a skill from a skill_tree.yaml entry. Takes a skill name, description, and source docs as inputs; outputs a validated SKILL.md that conforms to the tree-generator spec.\n",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

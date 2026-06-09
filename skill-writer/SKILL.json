@@ -1,0 +1,11 @@
+{
+    "name": "skill-writer",
+    "description": "Create and improve agent skills following the Agent Skills specification. Use when asked to create, write, or update skills.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "agent skills specification",
+        "gen",
+        "pec"
+    ]
+}

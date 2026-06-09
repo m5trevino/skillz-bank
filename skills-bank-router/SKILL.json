@@ -1,0 +1,8 @@
+{
+  "name": "skills-bank-router",
+  "description": "Central router for all skill hubs (11 main hubs, 48+ sub-hubs, 1,400+ skills).\nUse this to understand the complete landscape and route to specific hubs.\n\nGuard: DO NOT assume skills exist outside verified hubs list below.\n",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities"
+}

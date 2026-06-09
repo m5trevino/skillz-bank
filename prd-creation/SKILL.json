@@ -1,0 +1,20 @@
+{
+  "name": "prd-creation",
+  "description": "Generate comprehensive Product Requirements Documents (PRDs) through structured \nclarifying questions. Use when starting a new feature and need to define requirements\nbefore technical planning. Enforces \"docs-first\" methodology - no code until PRD exists.\n",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "code",
+    "echn",
+    "enf",
+    "gener",
+    "nee",
+    "new",
+    "no code until prd exists",
+    "que",
+    "ruc",
+    "ugh"
+  ],
+  "category": "Documentation_Writing",
+  "domain": "Documentation_Writing"
+}

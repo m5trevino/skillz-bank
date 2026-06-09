@@ -1,0 +1,20 @@
+{
+  "name": "skill-improver",
+  "description": "Iteratively improve a Claude Code skill using the skill-reviewer agent until it meets quality standards. Use when improving a skill with multiple quality issues, iterating on a new skill until it meets standards, or automated fix-review cycles instead of manual editing.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "and",
+    "automated fix-review cycles instead of manual editing",
+    "cle",
+    "gen",
+    "issues",
+    "meets quality standards",
+    "new",
+    "ple",
+    "review",
+    "skill-reviewer agent"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

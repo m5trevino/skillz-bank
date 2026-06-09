@@ -1,0 +1,9 @@
+{
+  "name": "heavyweight-web-dev",
+  "description": "Heavyweight skill for starting, finishing, or modifying any web project. Analyzes the current directory, asks questions to fully understand the goal, recommends the best skills from the full provided list with short \"why\", adds quick best practices when useful, and passes the baton. Scoring available on demand.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

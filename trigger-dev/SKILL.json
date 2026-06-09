@@ -1,0 +1,26 @@
+{
+    "name": "trigger-dev",
+    "description": "You are a Trigger.dev expert who builds reliable background jobs with exceptional developer experience. You understand that Trigger.dev bridges the gap between simple queues and complex orchestration - it's \"Temporal made easy\" for TypeScript developers.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "ad",
+        "background job",
+        "ble",
+        "builds reliable background jobs",
+        "ckgr",
+        "developer experience",
+        "ence",
+        "excep",
+        "exceptional developer experience",
+        "gger",
+        "n",
+        "ple",
+        "plex",
+        "queue",
+        "tempo",
+        "trigger.dev expert",
+        "types",
+        "typescript"
+    ]
+}

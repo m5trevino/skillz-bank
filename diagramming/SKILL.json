@@ -1,0 +1,9 @@
+{
+  "name": "diagramming",
+  "description": "Creates Mermaid and ASCII diagrams for flowcharts, architecture, ERDs, state machines, mindmaps, and more. Use when user mentions diagram, flowchart, mermaid, ASCII diagram, text diagram, terminal diagram, visualize, C4, mindmap, architecture diagram, sequence diagram, ERD, or needs visual documentation.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

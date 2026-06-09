@@ -1,0 +1,23 @@
+{
+  "name": "skill-sentinel",
+  "description": "Auditoria e evolucao do ecossistema de skills. Qualidade de codigo, seguranca, custos, gaps, duplicacoes, dependencias e relatorios de saude.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "auditoria e evolucao do ecossistema de skills",
+    "custos",
+    "dependencias",
+    "duplicacoes",
+    "egur",
+    "enc",
+    "epen",
+    "gaps",
+    "luc",
+    "nel",
+    "qualidade de codigo",
+    "relatorios de saude",
+    "seguranca"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

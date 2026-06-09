@@ -1,0 +1,9 @@
+{
+  "name": "mindmap-generator",
+  "description": "Mindmap Generator - Auto-activating skill for Visual Content.\nTriggers on: mindmap generator, mindmap generator\nPart of the Visual Content skill category.\n",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

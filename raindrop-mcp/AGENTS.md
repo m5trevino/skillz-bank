@@ -1,0 +1,118 @@
+# Agent Operating Guide
+
+## Shared Mission
+
+Deliver production-ready enhancements to the Raindrop MCP server while preserving full MCP protocol compliance. Reuse existing patterns in `src/services/raindropmcp.service.ts` before creating new abstractions. Keep responses concise, cite relevant files/lines, and recommend verification steps after changes.
+
+## Agent Roles & Guidelines
+
+### Claude (Anthropic)
+
+**Primary Reference**: `CLAUDE.md` for project overview, version info, capabilities, and architecture
+
+- **Modular Tools**: Always add new tools to domain-specific files in `src/tools/` (e.g., `bookmarks.ts`, `cleanup.ts`).
+- **Standardized Naming**: Use `snake_case` for all tool names (e.g., `list_raindrops`, `get_raindrop`).
+- **Sampling**: Leverage the `mcpServer` instance in `ToolHandlerContext` for AI-powered features via `createMessage`.
+- **Safety**: Ensure destructive tools (`delete`, `empty`, `remove`) require a `confirm: true` parameter.
+- **Resource Links**: Prefer returning `resource` contents (URI links) for lists instead of heavy JSON payloads.
+
+### GitHub Copilot / Code Generation Agents
+
+**Primary Reference**: `.github/copilot-instructions.md` for coding standards
+
+- TypeScript + Bun + Vitest + Zod validation required
+- Reference `.github/skills/` for domain-specific skills:
+  - `mcp-development/SKILL.md` - MCP server design patterns and best practices
+  - `mcp-inspector/SKILL.md` - Protocol inspection and debugging
+  - `mcp-refactoring/SKILL.md` - Tool refactoring for LLM optimization
+  - `mcp-testing/SKILL.md` - Testing strategies with Vitest and Inspector
+  - `dxt-packaging/SKILL.md` - MCPB packaging and distribution (legacy DXT references)
+  - `publishing/SKILL.md` - Publishing and release workflows
+- Sort imports: external → internal
+- Use async/await consistently
+- Use logging helpers (`utils/logger.ts`) instead of `console.log`
+
+### Other LLM Operators (Cursor, ChatGPT, etc.)
+
+- Follow Copilot guidelines unless targeting documentation/analysis
+- Surface ambiguities about Raindrop API behavior to user
+- Default to OpenAPI definitions in `raindrop-complete.yaml` for API contracts
+
+## Development Workflow
+
+### Quick Start Commands
+
+```bash
+# Install dependencies
+bun install
+
+# Development (watch mode)
+bun run dev              # STDIO server
+bun run dev:http         # HTTP server on :3002
+
+# Testing & Quality
+bun run test             # Run all tests
+bun run test:coverage    # With coverage report
+bun run test:e2e         # MCPJam integration tests (requires build + token)
+bun run type-check       # TypeScript validation
+
+# Building & Running
+bun run build            # Compile to build/
+bun run start:prod       # Run production build
+
+# Debugging
+bun run inspector                # MCP Inspector (STDIO)
+bun run inspector:http-server    # MCP Inspector (HTTP)
+
+# Code Generation (only when OpenAPI spec changes)
+bun run generate:schema   # Generate TypeScript types
+bun run generate:client   # Generate Axios client
+
+# Dependency Management
+bun run update:deps                # Update all deps to latest
+bun run update:deps:interactive    # Interactive updates
+bun run bun:update                 # Conservative updates
+
+# Release & Distribution
+bunx semantic-release --dry-run   # Validate release calculation locally (no publish)
+```
+
+### Project Architecture
+
+**Entry Points**:
+
+- `src/index.ts` - STDIO transport (main CLI entry)
+- `src/server.ts` - HTTP/SSE transport (port 3002)
+
+**Core Services**:
+
+- `src/services/raindropmcp.service.ts` - MCP server implementation (tool/resource registration)
+- `src/services/raindrop.service.ts` - Raindrop.io API client wrapper
+
+**Testing**: All tests in `tests/` using Vitest. Update coverage when adding tools/resources.
+
+## MCP Protocol & Resources
+
+- **Centralized Management**: Tool registration and resource handling in `RaindropMCPService`
+- **Dynamic Resources**: `mcp://collection/{id}`, `mcp://raindrop/{id}` fetch live data via `RaindropService`
+- **Resource Content**: Tools emit `resource` content with `uri`, `mimeType`, and embedded JSON `text`
+- **Authentication**: Requires `RAINDROP_ACCESS_TOKEN` environment variable (never hard-code)
+
+## Documentation & Release Process
+
+### When to Update Documentation
+
+- **README.md** - User-facing features, installation, or usage changes
+- **CLAUDE.md** - Version updates, architectural changes, or new capabilities
+- **LOGGING_DIAGNOSTICS.md** - Logging behavior or diagnostic features
+- **AGENTS.md** / **copilot-instructions.md** - Development workflow or tooling changes
+
+### Release Checklist
+
+1. Run `bun run type-check` and `bun run test` (all passing)
+2. Use Conventional Commits so semantic-release can determine the correct version bump.
+3. Run `.github/workflows/release-dry-run.yml` to validate release flow before public publish.
+4. Ensure semantic-release prepare step syncs `manifest.json`, `mcp.json`, and `gemini-extension.json`.
+5. Merge to `master` to trigger the release job in `.github/workflows/ci.yml`.
+6. Ensure npm trusted publishing (OIDC) is configured for this repository/package.
+7. Do not manually bump versions or push release tags for standard releases.

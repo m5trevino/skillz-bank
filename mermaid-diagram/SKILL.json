@@ -1,0 +1,9 @@
+{
+  "name": "mermaid-diagram",
+  "description": "Creates syntactically correct mermaid diagrams (flowchart, sequenceDiagram, classDiagram, stateDiagram, erDiagram, gantt, mindmap) following official specifications. Prevents common errors like special characters in labels, subgraph syntax, note misuse, and reserved words. Use when creating or editing mermaid diagrams in documentation or design files.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

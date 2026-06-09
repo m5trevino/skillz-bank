@@ -1,0 +1,9 @@
+{
+  "name": "deepdive",
+  "description": "Universal project documentation with visual architecture, web design handoff specs, and conversation archaeology. Generates Mermaid diagrams, PNG renders, and pixel-perfect design instructions for developer handoff.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}

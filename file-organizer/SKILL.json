@@ -1,0 +1,26 @@
+{
+  "name": "file-organizer",
+  "description": "Intelligently organizes your files and folders across your computer by understanding context, finding duplicates, suggesting better structures, and automating cleanup tasks. Reduces cognitive load and keeps your digital workspace tidy without manual effort.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "and",
+    "automating cleanup tasks",
+    "cle",
+    "cleanup",
+    "finding duplicates",
+    "gen",
+    "keep",
+    "reduces cognitive load",
+    "ruc",
+    "suggesting better structures",
+    "task",
+    "uce",
+    "ugge",
+    "understanding context",
+    "without manual effort",
+    "zer"
+  ],
+  "category": "Project_Workflow_Management",
+  "domain": "Project_Workflow_Management"
+}

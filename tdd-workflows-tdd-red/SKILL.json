@@ -1,0 +1,13 @@
+{
+    "name": "tdd-workflows-tdd-red",
+    "description": "Generate failing tests for the TDD red phase to define expected behavior and edge cases.",
+    "version": "1.0.0",
+    "contextFileName": "SKILL.md",
+    "tags": [
+        "c",
+        "define expected behavior and edge cases",
+        "expec",
+        "gener",
+        "kfl"
+    ]
+}

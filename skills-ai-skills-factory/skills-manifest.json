@@ -1,0 +1,17 @@
+{
+    "name":  "skills-ai-skills-factory",
+    "main_hub":  "ai",
+    "sub_hub":  "skills-factory",
+    "description":  "AI skill authoring: creating, refining, auditing, and validating new AI skills",
+    "skill_count":  23,
+    "src_count":  4,
+    "top_triggers":  [
+                         null
+                     ],
+    "generated_at":  "2026-03-28T17:09:43+02:00",
+    "files":  {
+                  "skill":  "SKILL.md",
+                  "index":  "skills-index.json",
+                  "catalog":  "skills-catalog.csv"
+              }
+}

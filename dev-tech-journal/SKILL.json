@@ -1,0 +1,30 @@
+{
+  "name": "dev-tech-journal",
+  "description": "Use this skill to extract, analyze, and document the development history of a project from chat transcripts. It captures pivots, design decisions, feature requests, and architectural changes into \"bad ass\" Markdown and beautiful HTML reports. Trigger this skill when the user asks for a \"dev log\", \"technical journal\", \"session summary\", or wants to document the \"why\" behind the build.",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "tags": [
+    "architectural changes",
+    "beautiful html reports",
+    "captures pivots",
+    "chat transcripts",
+    "design decisions",
+    "dev log",
+    "ech",
+    "ech-urn",
+    "echn",
+    "feature requests",
+    "ful",
+    "gger",
+    "jec",
+    "nge",
+    "que",
+    "rch",
+    "report",
+    "session summary",
+    "technical journal",
+    "urn"
+  ],
+  "category": "Documentation_Writing",
+  "domain": "Documentation_Writing"
+}

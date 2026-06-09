@@ -1,0 +1,9 @@
+{
+  "name": "mermaid-diagrams",
+  "description": "Generate Mermaid diagrams (flowcharts, sequence, class, state, ER, C4, mindmaps, gitgraph). Use when asked to create diagrams, visualize processes, document architecture, or explain systems visually. Triggers include \"diagram\", \"flowchart\", \"sequence diagram\", \"class diagram\", \"state diagram\", \"ER diagram\", \"C4\", \"mindmap\", \"gitgraph\", \"visualize\", \"draw\".",
+  "version": "1.0.0",
+  "contextFileName": "SKILL.md",
+  "category": "Specialized_Tools_Utilities",
+  "domain": "Specialized_Tools_Utilities",
+  "tags": []
+}
