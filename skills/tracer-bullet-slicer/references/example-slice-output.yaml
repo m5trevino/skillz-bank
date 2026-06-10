@@ -1,0 +1,49 @@
+# Example: Breaking a "User Payment System" PRD into tracer bullets
+# This shows the expected output format with real slice boundaries.
+
+tracer_bullets:
+  - slice_id: TB-001
+    name: "Payment Method Entry Form"
+    objective: "User can input and save a credit card"
+    scope: "Card number, expiry, CVC fields + Stripe Elements tokenization + encrypted local storage"
+    acceptance_criteria:
+      - Card form renders with 4 fields (number, expiry, CVC, name)
+      - Validates format and Luhn check on blur
+      - Stripe token returned for valid card
+      - Token stored in encrypted local storage
+    test_strategy: "Form validation unit tests + Stripe tokenization integration test"
+    handoff_format: "Stripe token string + last4 + card brand"
+    estimated_effort: "6 hours"
+    hard_gates:
+      - Must not reference payment history, refunds, or receipts
+      - Must not touch any backend route
+
+  - slice_id: TB-002
+    name: "Charge a Saved Card"
+    objective: "Backend accepts a token + amount and processes a charge"
+    scope: "POST /charges endpoint + Stripe charge call + idempotency key + error mapping"
+    acceptance_criteria:
+      - POST /charges with valid token + amount returns charge_id
+      - Duplicate requests with same idempotency key return same result
+      - Invalid token returns 422 with clear error
+    test_strategy: "Integration tests with Stripe test tokens + idempotency replay tests"
+    handoff_format: "charge_id + status + amount_captured"
+    estimated_effort: "4 hours"
+    hard_gates:
+      - Must not reference user profiles, saved payment methods, or refund logic
+
+  - slice_id: TB-003
+    name: "One-Click Payment Button"
+    objective: "User can tap a button to pay with their saved card"
+    scope: "UI button + charge API call + loading/success/error states + receipt placeholder"
+    acceptance_criteria:
+      - Button disabled when no saved card exists
+      - Shows loading spinner during charge
+      - On success: shows checkmark + transitions to receipt placeholder
+      - On failure: shows inline error with retry option
+    test_strategy: "Component tests for all states + Cypress flow test"
+    handoff_format: "No handoff — terminal slice"
+    estimated_effort: "5 hours"
+    hard_gates:
+      - Must assume TB-001 (saved card) and TB-002 (charge endpoint) exist
+      - Must not build receipt page — only placeholder
