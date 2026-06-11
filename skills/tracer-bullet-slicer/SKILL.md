@@ -106,6 +106,36 @@ tracer_bullets:
 - **Two identical handoff formats from different slices**: They overlap. Merge or re-slice.
 - **Input is already slices**: Skip straight to validation. Check: independence, size, gate coverage, test strategy.
 
+## Slice Execution Tracking
+
+When this sliced plan is handed off for execution, the executor MUST:
+
+1. **Create `slice.done.md`** in the CWD before starting any slice, with the full list of slices and their initial status as `pending`.
+2. **Update `slice.done.md` after every completed slice** — regardless of outcome (success, partial, blocked, cancelled).
+3. **Append** new entries; never overwrite or delete historical entries. The file is an append-only log.
+
+### Format
+
+```markdown
+# Slice Progress
+
+| # | Slice ID | Status | Completed | Notes |
+|---|----------|--------|-----------|-------|
+| 1 | TB-001 | ✅ done | 2026-06-10 | Brief one-liner on outcome |
+| 2 | TB-002 | 🔄 in-progress | — | Started at 14:30 |
+| 3 | TB-003 | ⏳ pending | — | Waiting on TB-002 |
+```
+
+**Status values:**
+- `⏳ pending` — not yet started
+- `🔄 in-progress` — currently being worked (only one at a time)
+- `✅ done` — completed successfully, all acceptance criteria met
+- `⚠️ partial` — done enough to unblock next slice, but has caveats (document in Notes)
+- `🚫 blocked` — cannot proceed; blocker documented in Notes
+- `❌ cancelled` — no longer needed
+
+The executor reads `slice.done.md` before picking the next slice to confirm dependencies are met and avoid redundant work.
+
 ## References
 
 See `references/example-slice-output.yaml` for a concrete example of a 3-slice decomposition of a "User Payment System" PRD.
